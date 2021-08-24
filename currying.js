@@ -1,3 +1,4 @@
+// 闭包，保存参数，返回函数，将保存的参数传入
 function currying(){
     let res = [...arguments].reduce((a, b) => a+b)
     function temp() {
