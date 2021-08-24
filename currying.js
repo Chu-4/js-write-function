@@ -1,4 +1,6 @@
-// 闭包，保存参数，返回函数，将保存的参数传入
+// 核心思想：闭包+递归。
+// 保存参数，return函数，将保存的参数传入
+
 function currying(){
     let res = [...arguments].reduce((a, b) => a+b)
     function temp() {
