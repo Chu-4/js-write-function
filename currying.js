@@ -68,7 +68,7 @@ function currying() {
             console.log(a + b)
         });
     }
-    return _adder;
+    return _adder
 }
 
 console.log(add(1)(2)(3)())                //fn 6
