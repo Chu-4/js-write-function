@@ -1,4 +1,4 @@
-Function.prototype.isCall = function(content){
+Function.prototype.isCall = function(context){
     context = context || window // 赋值作用域参数，如果没有则默认为 window
     context.fn = this // 绑定调用函数（调用call方法会调用一遍自身，所以这里要存下来自身）
     let args = [...arguments].slice(1) // 获取第一个参数以外的其他参数
