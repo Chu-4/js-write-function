@@ -53,3 +53,20 @@ function selectSort (arr){
     }
     return arr
 }
+
+
+//插入   假设当前数字前的为以排序内容，分别和前方对比，如果大与当前数就把大的值往后移动一位，将当前temp插入到移动后空出的位置，如果小则不变，从后开始对比
+function insertSort(arr){
+    //假设第一位已排好序
+    for (let i=1; i<arr.length; i++) {
+        //缓存当前元素值
+        let temp = arr[i],
+        j = i-1
+        while(j >= 0 && arr[j] > temp) {
+            arr[j+1] = arr[j]
+            j--
+        }
+        arr[j+1] = temp // 跳出while循环时已经j--，所以要填补的位置是j+1
+    }
+    return arr
+}
