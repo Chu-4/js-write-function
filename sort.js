@@ -16,3 +16,22 @@ function quickSort (arr) {
     }
     return quickSort(left).concat(midNum, quickSort(right))
 }
+
+
+//冒泡
+function bubbleSort (arr) {
+    if (arr.length < 2) {
+        return arr
+    }
+    //最后一位已被排好序不需要再循环一遍所以为arr.length-1
+    for (let i=0;i<arr.length-1;i++){
+        for (let j=i;j<arr.length;j++){
+            if (arr[i] > arr[j]) {
+                let temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+            }
+        }
+    }
+    return arr
+}
