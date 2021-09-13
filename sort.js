@@ -35,3 +35,21 @@ function bubbleSort (arr) {
     }
     return arr
 }
+
+
+//选择 冒泡改进 每次都找出最小的数放在前面
+function selectSort (arr){
+    let min
+    for (let i = 0;i<arr.length-1;i++){
+        min = i
+        for (let j = i;j<arr.length;j++) {
+            if (arr[j]<arr[min]) {
+                min = j
+            }
+        }
+        let temp = arr[i]
+        arr[i] = arr[min]
+        arr[min] = temp
+    }
+    return arr
+}
